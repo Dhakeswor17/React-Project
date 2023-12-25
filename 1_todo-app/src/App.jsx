@@ -2,19 +2,27 @@ import { useState } from 'react'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
-import Heading from './components/Heading'
+
 import AddItem from './components/AddItem'
-import Listitem from './components/Listitem'
+
+import TodoItems from './components/tODOiTEMS.JSX'
+import TodoItem from './components/TodoItem'
 
 function App() {
+  const todoItems = [{
+    name:'Goto School',
+    dueDate:'2024'
+  },
+{
+  name: 'Do assignment',
+  dueDate:'2023/12/31'
+}]
 return (
 <center className='todo-container'>
-      <Heading></Heading>
-      <div className="item-container">
+    <h1>TODO-LIST</h1>
       <AddItem></AddItem>
-      <Listitem></Listitem>
-      </div>
-    </center>
+      <TodoItems todoItems={todoItems}></TodoItems>
+      </center>
 
   )
 }

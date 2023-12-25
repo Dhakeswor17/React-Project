@@ -29,4 +29,8 @@ input {
 .kg-btn{
     width: 100px;
     margin-left: 75%;
+    
+}
+.kg-btn:hover{
+    background-color: aqua;
 }
