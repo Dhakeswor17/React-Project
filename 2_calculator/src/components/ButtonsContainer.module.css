@@ -1,0 +1,16 @@
+.btnContaine{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+  
+}
+.button{
+    width: 45px;
+    height: 45px;
+    margin: 4px;
+    padding: 1px;
+    background-color: rgb(185, 185, 251);
+    text-align: center;
+    border-radius: 5px;
+}
