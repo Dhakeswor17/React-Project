@@ -9,13 +9,14 @@ const Display = () => {
     'Pen',
     'Rice',
     'Noodles',
-    'Bread'
+    'Bread',
+    'sweets'
   ]
   return (
     <div className={styles.display}>
-        <ul class="list-group">
-          {BuyItem.map(item=><li class="list-group-item">{item}<button type="button" 
-          className= {`${styles.btn} btn btn-info`}>Buy</button></li>)}
+        <ul className="list-group">
+          {BuyItem.map(item=><li class="list-group-item" key={item}>{item}<button type="button" 
+          className= {`${styles.btn} btn btn-info`}>rem</button></li>)}
   
 </ul>
      

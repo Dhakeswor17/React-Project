@@ -3,11 +3,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 200px;
-    
-
-
+    margin: 50px;
 }
+
 body{
     background-color: aqua;
 }
@@ -22,8 +20,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(240, 151, 151);
     
 }
 .btn:hover{
-    background-color: rgb(150, 150, 244);
+    background-color: rgb(232, 18, 43);
 }

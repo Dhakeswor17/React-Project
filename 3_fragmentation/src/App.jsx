@@ -1,12 +1,15 @@
 import './App.css'
 import Display from './components/Display'
+import AddItems from './components/addItems'
 
 
 function App() {
   
 
-  return (
+  return (<>
+  <AddItems></AddItems>
     <Display></Display>
+    </>
   )
 }
 
