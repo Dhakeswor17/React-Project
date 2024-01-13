@@ -9,6 +9,8 @@ function App() {
    
   const [textState, setTextState] = useState('')
   const [BuyItem, setBuyItem]=useState([])
+  const[activeItem, setActiveItem]= useState([])
+  
   const handleOnKeyDown = (event)=>{
     if(event.key === 'Enter')
     {
@@ -17,12 +19,22 @@ function App() {
     let newArray = [...BuyItem, userAddValue]
     setBuyItem(newArray)
   }
+ 
+}
+const handleClickBtn =()=>{
+  let boughItem = [...activeItem, BuyItem]
+  setActiveItem(boughItem)
+
 }
  return (<>
- <h1>What do you eant to buy</h1>
+ <h1>What do you want to buy</h1>
   <AddItems changeItem = {handleOnKeyDown } ></AddItems>
   <ErrorMessage product= {BuyItem}></ErrorMessage>
-    <Display items={BuyItem}></Display>
+    <Display items={BuyItem}
+    bought={activeItem.includes(BuyItem)}
+    handleBuyButton = {()=>handleClickBtn(BuyItem)}
+    
+ ></Display>
     </>
   )
 }
