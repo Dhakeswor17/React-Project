@@ -34,7 +34,7 @@ const handleClickBtn =()=>{
     bought={activeItem.includes(BuyItem)}
     handleBuyButton = {()=>handleClickBtn(BuyItem)}
     
- ></Display>
+ ></Display>  
     </>
   )
 }

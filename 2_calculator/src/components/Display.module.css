@@ -1,8 +1,7 @@
-.display{
+.display {
     background-color: rgb(185, 185, 251);
     margin: 10px;
     width: 170PX;
-height: 30px;
-border-radius: 5px;
-    
+    height: 30px;
+    border-radius: 5px;
 }
