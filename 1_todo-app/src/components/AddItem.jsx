@@ -12,7 +12,7 @@ const AddItem = () => {
             <input type="date" />
           </div>
           <div class="col-2"> 
-          <button type="button" class="btn btn-success kg-btn">Add</button>
+          <button type="button" class="btn btn-success kg-btn_add">Add</button>
           </div>
         </div>
        

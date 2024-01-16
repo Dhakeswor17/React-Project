@@ -16,8 +16,6 @@ input {
     width: 100%;
     background-color: bisque;
     color: black;
-    
-    
 }
 .item-container{
     text-align: left;
@@ -26,11 +24,15 @@ input {
     margin: 10px 5px;
 
 }
-.kg-btn{
+.kg-btn,.kg-btn_add{
     width: 100px;
     margin-left: 75%;
     
 }
 .kg-btn:hover{
-    background-color: aqua;
+    background-color: rgb(92, 95, 95);
+    
+}
+.kg-btn_add{
+    margin-left: 95%;
 }
