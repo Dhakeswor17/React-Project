@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
-import AddItem from './components/AddItem'
+import AddItem from './components/AddItem.jsx'
 import TodoItems from './components/tODOiTEMS.JSX'
 import ErrorMessage from './ErrorMessage.jsx'
 

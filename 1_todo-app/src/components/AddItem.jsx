@@ -2,11 +2,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { useState } from 'react'
+import { SiAddthis } from "react-icons/si";
 
 
 const AddItem = ({ handleAddItem }) => {
-  const [addNewToDoList, setAddNewToDoList] = useState()
-  const [addDueDate, setAddDueDate] = useState()
+  const [addNewToDoList, setAddNewToDoList] = useState("")
+  const [addDueDate, setAddDueDate] = useState('')
 
   const handleAddToList = (event) => {
     const value = event.target.value
@@ -19,11 +20,15 @@ const AddItem = ({ handleAddItem }) => {
 
   }
   const handleAddButtonClick=()=>{
-    handleAddItem(addNewToDoList, addDueDate)
+    if(addNewToDoList==='' || addDueDate===''){
+      alert('Please fill both fields')
+      
+    }else{
+      handleAddItem(addNewToDoList, addDueDate)
     setAddNewToDoList(' ')
     setAddDueDate(' ')
+    }
     
-
   }
   return (
 
@@ -45,7 +50,7 @@ const AddItem = ({ handleAddItem }) => {
           <div className="col-2">
             <button type="button" className="btn btn-success kg-btn_add"
               onClick={handleAddButtonClick}
-            >Add</button>
+            ><SiAddthis /></button>
           </div>
         </div>
 
