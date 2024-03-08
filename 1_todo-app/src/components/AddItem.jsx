@@ -31,11 +31,10 @@ const AddItem = ({ handleAddItem }) => {
     
   }
   return (
-
-
-    <div>
+ 
+ <div>
       <div className="container">
-        <div className="row kg-row btn-add">
+        <form className="row kg-row btn-add">
           <div className="col-6">
             <input type="text" placeholder='Enter todo list'
               onChange={handleAddToList} 
@@ -50,9 +49,9 @@ const AddItem = ({ handleAddItem }) => {
           <div className="col-2">
             <button type="button" className="btn btn-success kg-btn_add"
               onClick={handleAddButtonClick}
-            ><SiAddthis /></button>
+            ><SiAddthis/></button>
           </div>
-        </div>
+        </form>
 
       </div>
     </div>

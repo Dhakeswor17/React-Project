@@ -5,10 +5,11 @@ import './App.css'
 import AddItem from './components/AddItem.jsx'
 import TodoItems from './components/tODOiTEMS.JSX'
 import ErrorMessage from './ErrorMessage.jsx'
+import { TodoItemContext } from './store/todo-items-store.jsx'
 
 function App() {
   
-  const InitialtodoItems = []
+  const InitialtodoItems = [] 
 
 const [todoItem, setToDoItems] =useState(InitialtodoItems)
 const handleNewItem = (ItemName, DueDate)=>{
@@ -20,15 +21,21 @@ const handleDltClick = (toDoItemName)=>{
   setToDoItems(newToDoItems)
   
 }
+// const defaultValue = [{ 
+//   name:'Buy Ghee',
+//   dueDate:'today'
+// }]
 
 return (
+  <TodoItemContext.Provider value={todoItem}>
 <center className='todo-container'>
     <h1>TODO-LIST</h1>
       <AddItem handleAddItem = {handleNewItem  }></AddItem>
-      {todoItem.length===0 && <ErrorMessage></ErrorMessage>}
-      <TodoItems todoItems={todoItem}
+      {<ErrorMessage></ErrorMessage>}
+      <TodoItems 
       handleDlthandle = {handleDltClick} ></TodoItems>
       </center>
+      </TodoItemContext.Provider> 
 
   )
 }
