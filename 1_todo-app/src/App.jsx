@@ -12,11 +12,11 @@ function App() {
   const InitialtodoItems = [] 
 
 const [todoItem, setToDoItems] =useState(InitialtodoItems)
-const handleNewItem = (ItemName, DueDate)=>{
+const addNewItem= (ItemName, DueDate)=>{
   const newItems = [...todoItem, {name: ItemName, dueDate: DueDate}]
   setToDoItems(newItems)
 }
-const handleDltClick = (toDoItemName)=>{
+const deleteItem = (toDoItemName)=>{
   const newToDoItems = todoItem.filter((item)=> item.name !== toDoItemName)
   setToDoItems(newToDoItems)
   
@@ -27,13 +27,16 @@ const handleDltClick = (toDoItemName)=>{
 // }]
 
 return (
-  <TodoItemContext.Provider value={todoItem}>
+  <TodoItemContext.Provider value={{
+    todoItem,
+    addNewItem,
+    deleteItem,
+}}>
 <center className='todo-container'>
     <h1>TODO-LIST</h1>
-      <AddItem handleAddItem = {handleNewItem  }></AddItem>
-      {<ErrorMessage></ErrorMessage>}
-      <TodoItems 
-      handleDlthandle = {handleDltClick} ></TodoItems>
+      <AddItem></AddItem>
+      <ErrorMessage></ErrorMessage>
+      <TodoItems ></TodoItems>
       </center>
       </TodoItemContext.Provider> 
 

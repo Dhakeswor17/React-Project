@@ -1,11 +1,15 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState } from 'react'
 import { SiAddthis } from "react-icons/si";
+import { TodoItemContext } from '../store/todo-items-store';
 
 
-const AddItem = ({ handleAddItem }) => {
+const AddItem = () => {
+  const contextObj = useContext(TodoItemContext)
+  const addNewItem = contextObj.addNewItem 
+
   const [addNewToDoList, setAddNewToDoList] = useState("")
   const [addDueDate, setAddDueDate] = useState('')
 
@@ -24,7 +28,7 @@ const AddItem = ({ handleAddItem }) => {
       alert('Please fill both fields')
       
     }else{
-      handleAddItem(addNewToDoList, addDueDate)
+      addNewItem(addNewToDoList, addDueDate)
     setAddNewToDoList(' ')
     setAddDueDate(' ')
     }

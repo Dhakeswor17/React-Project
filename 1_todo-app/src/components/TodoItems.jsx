@@ -6,7 +6,8 @@ import TodoItem from './TodoItem'
 import { TodoItemContext } from '../store/todo-items-store'
 
 const TodoItems = ({ handleDlthandle}) => {
-  const todoItems = useContext(TodoItemContext)
+  const contextObj = useContext(TodoItemContext)
+  const todoItems = contextObj.todoItem
   
   return (
     <div>

@@ -4,7 +4,8 @@ import { TodoItemContext } from './store/todo-items-store'
 import { useContext } from 'react';
 
 const ErrorMessage = () => {
-  const todoItems = useContext(TodoItemContext)
+  const contextObj1 = useContext(TodoItemContext)
+  const todoItems = contextObj1.todoItem
   return (
     todoItems.length === 0 &&
     <div className="alert alert-success" role="alert">

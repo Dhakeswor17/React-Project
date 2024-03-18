@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useContext } from 'react'
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { TodoItemContext } from '../store/todo-items-store';
 
-const TodoItem = ({todoName, todoDate, handleDlthandle}) => {
+const TodoItem = ({todoName, todoDate}) => {
+  const { deleteItem } = useContext(TodoItemContext)
     
   return (
     <div>
@@ -11,7 +13,7 @@ const TodoItem = ({todoName, todoDate, handleDlthandle}) => {
    <div className="col-6">{todoName}</div>
      <div className="col-4">{todoDate} </div>
      <div className="col-2">
-     <button type="button" className="btn btn-danger kg-btn" onClick={() => handleDlthandle(todoName)}>
+     <button type="button" className="btn btn-danger kg-btn" onClick={() => deleteItem (todoName)}>
      <RiDeleteBin6Line />
      </button>
      </div>
